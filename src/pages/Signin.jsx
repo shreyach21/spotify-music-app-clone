@@ -1,0 +1,152 @@
+import React, { useEffect, useState } from "react";
+import { FaSpotify } from "react-icons/fa6";
+import { FcGoogle } from "react-icons/fc";
+import { BiLogoFacebook } from "react-icons/bi";
+import { FaApple } from "react-icons/fa";
+import { IoToggleSharp } from "react-icons/io5";
+import { PiToggleLeftFill } from "react-icons/pi";
+import { ImEye, ImEyeBlocked } from "react-icons/im";
+
+const Signin = () => {
+  const handleLogin = () => {};
+  const [isVisible, setIsVisible] = useState(false);
+  const [isToggled, setIsToggled] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [type, setType] = useState("password");
+  useEffect(() => {
+    setType(isVisible ? "text" : "password");
+    console.log("Password type: ", type);
+  }, [isVisible]);
+  return (
+    <div className="min-h-screen">
+      <div className=" bg-gradient-to-b from-[rgba(255,255,255,0.17)]  to-[rgba(0,0,0)] flex items-center flex-col">
+        <div className="sm:w-full bg-gradient-to-b from-[rgba(0,0,0,0.6)] via-[rgba(0,0,0,0.3)] to-[rgba(255,255,255,0.07)] lg:w-[51%] md:w-[80%] max-sm:w-full  md:my-9 rounded-md flex flex-col justify-center py-1 ">
+          <div className="flex justify-center py-8 items-center">
+            <FaSpotify
+              color="white"
+              className="md:text-[41px]
+              sm:text-[28px]
+              max-sm:text-[28px]"
+            />
+          </div>
+          <h1 className="text-white text-4xl text-center pb-10 font-bold">
+            Log in to Spotify
+          </h1>
+          <div className="md:w-[44%] sm:w-[90%] max-sm:w-[88%] mx-auto space-y-[9px]">
+            <button className="flex items-center text-lg rounded-full border-[1.5px] border-white/45 hover:border-white px-[35px] py-3 w-full mx-auto">
+              <FcGoogle size={26} />
+              <span className="flex-grow text-center text-white/85 font-bold">
+                Continue with Google
+              </span>
+            </button>
+            <button className="flex items-center text-lg rounded-full border-[1.5px] border-white/45 hover:border-white px-[35px] py-3 w-full mx-auto">
+              <BiLogoFacebook
+                size={25}
+                className="bg-blue-600 rounded-full text-white"
+              />
+              <span className="flex-grow text-center text-white/85 font-bold">
+                Continue with Facebook
+              </span>
+            </button>
+            <button className="flex items-center text-lg rounded-full border-[1.5px] border-white/45 hover:border-white px-[35px] py-3 w-full mx-auto">
+              <FaApple size={27} color="white" />
+              <span className="flex-grow text-center text-white/85 font-bold">
+                Continue with Apple
+              </span>
+            </button>
+            <button className="text-center rounded-full border-[1.5px] border-white/45 hover:border-white px-6 py-3 w-full mx-auto text-white font-semibold text-lg ">
+              Continue with phone number
+            </button>
+          </div>
+          <div className="h-[1px] bg-white/10 md:w-[75%] sm:w-[90%] max-sm:w-[88%] mx-auto my-10"></div>
+          <form
+            onSubmit={handleLogin}
+            className="sm:w-[90%] max-sm:w-[88%] md:w-1/2 mx-auto"
+          >
+            <div className="flex flex-col">
+              <label htmlFor="email" className="pb-3 text-white/85 font-bold">
+                Email or username
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value={email}
+                placeholder="Email or username"
+                onChange={(e) => setEmail(e.target.value)}
+                className="px-6 py-4 rounded-md bg-black text-white/65 focus:border-white border-[1.5px] hover:border-white border-white/55 w-full focus:outline-white text-md"
+              />
+            </div>
+            <div className="flex flex-col mt-5">
+              <label htmlFor="password" className="pb-3 font-bold text-white">
+                Password
+              </label>
+              <div className="relative">
+                <input
+                  type={type}
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="px-6 py-4 rounded-md bg-black text-white/65 focus:border-white border-[1.5px] hover:border-white border-white/55 w-full focus:outline-white text-md"
+                />
+                <span
+                  className="absolute right-5 top-1/2 -translate-y-1/2"
+                  onClick={() => setIsVisible((prev) => !prev)}
+                >
+                  {isVisible ? (
+                    <ImEye size={30} className="text-white/65" />
+                  ) : (
+                    <ImEyeBlocked size={30} className="text-white/65" />
+                  )}
+                </span>
+              </div>
+            </div>
+            <div className="pt-4 text-sm text-white font-semibold flex items-center w-full">
+              <span
+                className="pr-4"
+                onClick={() => setIsToggled((prev) => !prev)}
+              >
+                {isToggled ? (
+                  <PiToggleLeftFill size={40} className="text-white/65" />
+                ) : (
+                  <IoToggleSharp size={40} color="#1ed760" />
+                )}
+              </span>
+              Remember me
+            </div>
+            <button
+              type="submit"
+              className="px-6 py-4 my-8  duration-300 rounded-full bg-[#1ed75fe7] text-black font-bold text-lg w-full cursor-pointer hover:bg-[#1ed760]"
+            >
+              Log In
+            </button>
+          </form>
+          <p className="text-white underline hover:text-[#1ed760] text-lg text-center w-full mx-auto cursor-pointer">
+            Forgot your password?
+          </p>
+          <div className="h-[1px] bg-white/10 w-[75%] mx-auto mt-10"></div>
+          <div className="text-center text-md my-20 ">
+            <span className="text-white/65 pr-2">Don't have an account?</span>
+            <span className="underline text-white font-bold cursor-pointer hover:text-[#1ed760]">
+              Sign up for Spotify
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="py-10 bg-[rgba(255,255,255,0.07)]">
+        <p className="text-white/65 text-sm text-center ">
+          This site is protected by reCAPTCHA and the Google&nbsp;
+          <span className="underline cursor-pointer">Privacy Policy</span>
+          &nbsp;and&nbsp;
+          <span className="underline cursor-pointer">Terms of Service</span>
+          &nbsp;apply.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default Signin;
