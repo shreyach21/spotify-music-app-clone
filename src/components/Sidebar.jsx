@@ -6,7 +6,7 @@ import { FiSearch, FiGlobe } from "react-icons/fi";
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col p-2 w-full text-white gap-2.5 ">
+    <div className="flex flex-col p-2  text-white gap-2.5 ">
       <div className="bg-[#121212] gap-7 h-[15%] rounded flex flex-col justify-around text-lg py-5">
         <div className="flex items-center cursor-pointer gap-0.5 pl-8">
           <FaSpotify color="white" size={27} />
@@ -15,7 +15,7 @@ const Sidebar = () => {
         <div className="flex items-center gap-7 cursor-pointer pl-8 text-white/65 hover:text-white duration-300 ">
           {/* <img src={assets.home_icon} className="w-6 " alt="home" /> */}
           <GoHomeFill size={30} />
-          <p className="font-semibold">Home</p>
+          <p className="font-semibold ">Home</p>
         </div>
         <div className="flex items-center gap-7 cursor-pointer pl-8 text-white/65 hover:text-white duration-300">
           {/* <img src={assets.search_icon} className="w-6 " alt="search" /> */}
@@ -23,7 +23,7 @@ const Sidebar = () => {
           <p className="font-semibold ">Search</p>
         </div>
       </div>
-      <div className="bg-[#121212] rounded h-[85%] p-2">
+      <div className="bg-[#121212] rounded h-[85%] ">
         <div className="px-4 py-3 flex justify-between items-center">
           <div className="flex gap-3 items-center">
             <img src={assets.stack_icon} className="w-8 " alt="library" />
@@ -68,10 +68,12 @@ const Sidebar = () => {
           </div>
         </div>
         <div className="flex items-start pb-6">
-          <button className="flex justify-center items-center gap-1 text-white font-semibold cursor-pointer px-3 py-1.5 border-[1.2px] border-white/55 hover:border-white duration-200 scale-105  ml-8 rounded-full text-sm">
-            <FiGlobe size={20} />
-            <p>English</p>
-          </button>
+          <div className="hover:scale-105">
+            <button className="flex justify-center items-center gap-1 text-white font-semibold cursor-pointer px-3 py-1.5 border-[1.2px] border-white/55 hover:border-white duration-200 scale-105  ml-8 rounded-full text-sm ">
+              <FiGlobe size={20} />
+              <p>English</p>
+            </button>
+          </div>
         </div>
       </div>
     </div>

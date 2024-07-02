@@ -19,7 +19,7 @@ const Signin = () => {
     console.log("Password type: ", type);
   }, [isVisible]);
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black">
       <div className=" bg-gradient-to-b from-[rgba(255,255,255,0.17)]  to-[rgba(0,0,0)] flex items-center flex-col">
         <div className="sm:w-full bg-gradient-to-b from-[rgba(0,0,0,0.6)] via-[rgba(0,0,0,0.3)] to-[rgba(255,255,255,0.07)] lg:w-[51%] md:w-[80%] max-sm:w-full  md:my-9 rounded-md flex flex-col justify-center py-1 ">
           <div className="flex justify-center py-8 items-center">
