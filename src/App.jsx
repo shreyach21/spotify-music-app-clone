@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="min-w-[100vw] min-h-screen bg-black">
+    <div className="min-w-[100vw] min-h-screen bg-black max-w-[100vw]">
       <div className="flex w-full h-full ">
         <div className="w-[24%]">
           <div className="fixed top-0 left-0 w-[24%] bg-black">
