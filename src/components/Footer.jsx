@@ -1,7 +1,86 @@
 import React from "react";
-
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 const Footer = () => {
-  return <div></div>;
+  return (
+    <div className="bg-[#121212] pb-10 pt-20 px-4 text-white flex flex-col">
+      <div className="flex justify-between ">
+        <div className="flex justify-between flex-grow ml-5 text-15 tracking-wide">
+          <div className="flex flex-col gap-y-2">
+            <p className="text-white font-semibold text-[15px]">Company</p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white ">
+              About
+            </p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              Jobs
+            </p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              For the Record
+            </p>
+          </div>
+          <div className="flex flex-col gap-y-2">
+            <p className="text-white font-semibold text-[15px]">Communities</p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              For Artists
+            </p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              Developers
+            </p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              Advertising
+            </p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              Investors
+            </p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              Vendors
+            </p>
+          </div>
+          <div className="flex flex-col gap-y-2">
+            <p className="text-white font-semibold text-[15px]">Useful links</p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              Support
+            </p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              Free Mobile App
+            </p>
+          </div>
+          <div className="flex flex-col gap-y-2">
+            <p className="text-white font-semibold text-[15px]">
+              Spotify Plans
+            </p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              Premium Individual
+            </p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              Premium Duo
+            </p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              Premium Family
+            </p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              Premium Student
+            </p>
+            <p className="text-white/65 cursor-pointer hover:underline hover:text-white">
+              Spotify Free
+            </p>
+          </div>
+        </div>
+        <div className="flex justify-between gap-4 ml-20 mr-5">
+          <div className="size-10 rounded-full bg-[#272727] hover:bg-[#696969] flex justify-center items-center">
+            <FaInstagram size={18} />
+          </div>
+          <div className="size-10 rounded-full bg-[#272727] hover:bg-[#696969] flex justify-center items-center">
+            <FaTwitter size={17} />
+          </div>
+          <div className="size-10 rounded-full bg-[#272727] hover:bg-[#696969] flex justify-center items-center">
+            <FaFacebook size={18} />
+          </div>
+        </div>
+      </div>
+      <div className="h-[1px] bg-[#272727] my-10"></div>
+      <div className="text-sm text-white/55 mb-8">&copy; 2024 Spotify AB</div>
+    </div>
+  );
 };
 
 export default Footer;

@@ -4,9 +4,9 @@ import Artist from "./Artist";
 
 const PopularArtists = () => {
   return (
-    <div className="flex flex-col mx-3 ">
-      <div className="flex justify-between mb-8 mt-24 items-center">
-        <h1 className="text-4xl font-medium text-white pl-3">
+    <div className="flex flex-col mx-2">
+      <div className="flex justify-between mb-8 mt-20 items-center">
+        <h1 className="text-3xl font-bold text-white pl-3 pt-16">
           Popular artists
         </h1>
       </div>
@@ -16,11 +16,10 @@ const PopularArtists = () => {
             <Artist
               img={img}
               name={name}
-              className="w-[13.2rem] h-[13.2rem]"
-              nameSize="text-base"
-              textSize="text-[15px]"
+              className="size-[11.8rem]"
+              nameSize="text-[15px] tracking-wide"
+              textSize="text-[13px]"
             />
-            <p className="text-lg">Hii</p>
           </div>
         ))}
       </div>
