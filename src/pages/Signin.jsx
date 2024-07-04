@@ -20,7 +20,7 @@ const Signin = () => {
   }, [isVisible]);
   return (
     <div className="min-h-screen bg-black">
-      <div className=" bg-gradient-to-b from-[rgba(255,255,255,0.17)]  to-[rgba(0,0,0)] flex items-center flex-col">
+      <div className=" bg-gradient-to-b  from-[#242424] to-[rgba(0,0,0)] flex items-center flex-col">
         <div className="sm:w-full bg-gradient-to-b from-[rgba(0,0,0,0.6)] via-[rgba(0,0,0,0.3)] to-[rgba(255,255,255,0.07)] lg:w-[51%] md:w-[80%] max-sm:w-full  md:my-9 rounded-lg flex flex-col justify-center py-1 ">
           <div className="flex justify-center py-6 items-center">
             <FaSpotify
@@ -59,7 +59,7 @@ const Signin = () => {
               Continue with phone number
             </button>
           </div>
-          <div className="h-[1px] bg-white/10 md:w-[75%] sm:w-[90%] max-sm:w-[88%] mx-auto my-10"></div>
+          <div className="h-[1px] bg-white/10 md:w-[75%] sm:w-[90%] max-sm:w-[88%] mx-auto mb-8 mt-10"></div>
           <form
             onSubmit={handleLogin}
             className="sm:w-[90%] max-sm:w-[88%] md:w-[44%] mx-auto"
