@@ -4,7 +4,7 @@ import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center px-6 w-full h-[60px] mt-2 bg-[#0c0c0c] rounded ">
+    <div className="flex justify-between items-center px-6 w-full h-[60px] mt-2 bg-[#0c0c0c] rounded z-50 ">
       <div className="flex gap-4">
         <GoChevronLeft
           className="text-white/55 hover:text-white duration-300 bg-black rounded-full"

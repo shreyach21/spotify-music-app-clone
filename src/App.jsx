@@ -15,7 +15,7 @@ const App = () => {
           </div>
         </div>
         <div className="w-3/4 ">
-          <div className="fixed top-0 right-0 left-[24%] bg-black">
+          <div className="fixed top-0 right-0 left-[24%] bg-black z-20">
             <Navbar />
           </div>
           <div className="w-full bg-[#121212] rounded text-white my-2 h-full pb-16 ">

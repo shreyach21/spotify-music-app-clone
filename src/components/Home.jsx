@@ -28,8 +28,8 @@ const Home = () => {
       <div className="flex flex-col mt-20 ">
         <div className="mb-11">
           <div className="flex justify-between mb-1 items-center pl-5 pr-3">
-            <h1 className="text-[22px] font-semibold text-white hover:underline">
-              Popular artists
+            <h1 className="text-[22px] font-semibold text-white hover:underline cursor-pointer">
+              <Link to="/popular-artists">Popular artists</Link>
             </h1>
             <p className="text-white/65 hover:underline cursor-pointer text-sm">
               <Link to="/popular-artists">Show all</Link>
@@ -51,8 +51,8 @@ const Home = () => {
         </div>
         <div className="mb-11">
           <div className="flex justify-between mb-1  items-center pl-5 pr-3">
-            <h1 className="text-[22px] font-semibold text-white hover:underline">
-              Popular albums
+            <h1 className="text-[22px] font-semibold text-white hover:underline cursor-pointer">
+              <Link to="/popular-artists">Popular albums</Link>
             </h1>
             <p className="text-white/65 hover:underline cursor-pointer text-sm">
               <Link to="/popular-albums">Show all</Link>
@@ -68,8 +68,8 @@ const Home = () => {
         </div>
         <div className="mb-11">
           <div className="flex justify-between mb-1  items-center pl-5 pr-3 ">
-            <h1 className="text-[22px] font-semibold text-white hover:underline">
-              Popular radio
+            <h1 className="text-[22px] font-semibold text-white hover:underline cursor-pointer">
+              <Link to="/popular-radios">Popular radio</Link>
             </h1>
             <p className="text-white/65 hover:underline cursor-pointer text-sm">
               <Link to="/popular-radios">Show all</Link>
@@ -85,7 +85,7 @@ const Home = () => {
         </div>
         <div className="mb-11">
           <div className=" mb-1   pl-5 pr-3 ">
-            <h1 className="text-[22px] font-semibold text-white hover:underline">
+            <h1 className="text-[22px] font-semibold text-white ">
               Featured Charts
             </h1>
           </div>
@@ -100,7 +100,7 @@ const Home = () => {
         <div className="mb-11">
           <div className="flex justify-between mb-1  items-center pl-5 pr-3 ">
             <h1 className="text-[22px] font-semibold text-white hover:underline">
-              Zzzzzzz
+              <Link to="/Zzzzzzz">Zzzzzzz</Link>
             </h1>
             <p className="text-white/65 hover:underline cursor-pointer text-sm">
               <Link to="/Zzzzzzz">Show all</Link>
@@ -117,7 +117,7 @@ const Home = () => {
         <div className="mb-11">
           <div className="flex justify-between mb-1  items-center pl-5 pr-3 ">
             <h1 className="text-[22px] font-semibold text-white hover:underline">
-              Trending Episode
+              <Link to="/trending-episodes">Trending Episodes</Link>
             </h1>
             <p className="text-white/65 hover:underline cursor-pointer text-sm">
               <Link to="/trending-episodes">Show all</Link>

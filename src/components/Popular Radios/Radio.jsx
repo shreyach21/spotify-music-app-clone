@@ -1,8 +1,13 @@
-import React from "react";
-
-const Radio = ({ img, radioName, singers }) => {
+import React, { useState } from "react";
+import { IoIosPlay } from "react-icons/io";
+const Radio = ({ img, radioName, singers, className, nameSize, textSize }) => {
+  const [hover, setHover] = useState(false);
   return (
-    <div className="flex flex-col  rounded hover:bg-[#1b1b1b] duration-300 cursor-pointer p-3 justify-center">
+    <div
+      className="flex flex-col  rounded hover:bg-[#1b1b1b] duration-300 cursor-pointer p-3 justify-center relative"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
       <div className={` overflow-hidden  rounded-md mb-2`}>
         <img src={img} alt={radioName} className="" />
       </div>
@@ -11,6 +16,9 @@ const Radio = ({ img, radioName, singers }) => {
         <p className="text-white/65 tracking-wide text-[13px] line-clamp-2">
           {singers}
         </p>
+      </div>
+      <div className={`play-button ${hover ? "visible" : "hidden"} `}>
+        <IoIosPlay size={30} color="black" />
       </div>
     </div>
   );

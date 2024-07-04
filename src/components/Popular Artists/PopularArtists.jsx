@@ -5,8 +5,8 @@ import Artist from "./Artist";
 const PopularArtists = () => {
   return (
     <div className="flex flex-col mx-2">
-      <div className="flex justify-between mb-8 mt-20 items-center">
-        <h1 className="text-3xl font-bold text-white pl-3 pt-16 hover:underline">
+      <div className=" mb-8 mt-20 items-center">
+        <h1 className="text-3xl font-bold text-white pl-3 pt-16 ">
           Popular artists
         </h1>
       </div>

@@ -21,51 +21,54 @@ const Signin = () => {
   return (
     <div className="min-h-screen bg-black">
       <div className=" bg-gradient-to-b from-[rgba(255,255,255,0.17)]  to-[rgba(0,0,0)] flex items-center flex-col">
-        <div className="sm:w-full bg-gradient-to-b from-[rgba(0,0,0,0.6)] via-[rgba(0,0,0,0.3)] to-[rgba(255,255,255,0.07)] lg:w-[51%] md:w-[80%] max-sm:w-full  md:my-9 rounded-md flex flex-col justify-center py-1 ">
-          <div className="flex justify-center py-8 items-center">
+        <div className="sm:w-full bg-gradient-to-b from-[rgba(0,0,0,0.6)] via-[rgba(0,0,0,0.3)] to-[rgba(255,255,255,0.07)] lg:w-[51%] md:w-[80%] max-sm:w-full  md:my-9 rounded-lg flex flex-col justify-center py-1 ">
+          <div className="flex justify-center py-6 items-center">
             <FaSpotify
               color="white"
-              className="md:text-[41px]
+              className="md:text-[38px]
               sm:text-[28px]
               max-sm:text-[28px]"
             />
           </div>
-          <h1 className="text-white text-4xl text-center pb-10 font-bold">
+          <h1 className="text-white text-[31px] text-center pb-7 font-bold">
             Log in to Spotify
           </h1>
-          <div className="md:w-[44%] sm:w-[90%] max-sm:w-[88%] mx-auto space-y-[9px]">
-            <button className="flex items-center text-lg rounded-full border-[1.5px] border-white/45 hover:border-white px-[35px] py-3 w-full mx-auto">
-              <FcGoogle size={26} />
+          <div className="md:w-[44%] sm:w-[90%] max-sm:w-[88%] mx-auto space-y-[8px]">
+            <button className="flex items-center text-md rounded-full border-[1.3px] border-white/45 hover:border-white px-[35px] py-3 w-full mx-auto">
+              <FcGoogle size={23} />
               <span className="flex-grow text-center text-white/85 font-bold">
                 Continue with Google
               </span>
             </button>
-            <button className="flex items-center text-lg rounded-full border-[1.5px] border-white/45 hover:border-white px-[35px] py-3 w-full mx-auto">
+            <button className="flex items-center text-md rounded-full border-[1.3px] border-white/45 hover:border-white px-[35px] py-3 w-full mx-auto">
               <BiLogoFacebook
-                size={25}
+                size={23}
                 className="bg-blue-600 rounded-full text-white"
               />
               <span className="flex-grow text-center text-white/85 font-bold">
                 Continue with Facebook
               </span>
             </button>
-            <button className="flex items-center text-lg rounded-full border-[1.5px] border-white/45 hover:border-white px-[35px] py-3 w-full mx-auto">
-              <FaApple size={27} color="white" />
+            <button className="flex items-center text-md rounded-full border-[1.3px] border-white/45 hover:border-white px-[35px] py-3 w-full mx-auto">
+              <FaApple size={23} color="white" />
               <span className="flex-grow text-center text-white/85 font-bold">
                 Continue with Apple
               </span>
             </button>
-            <button className="text-center rounded-full border-[1.5px] border-white/45 hover:border-white px-6 py-3 w-full mx-auto text-white font-semibold text-lg ">
+            <button className="text-center rounded-full border-[1.3px] border-white/45 hover:border-white px-6 py-3 w-full mx-auto text-white font-semibold text-md ">
               Continue with phone number
             </button>
           </div>
           <div className="h-[1px] bg-white/10 md:w-[75%] sm:w-[90%] max-sm:w-[88%] mx-auto my-10"></div>
           <form
             onSubmit={handleLogin}
-            className="sm:w-[90%] max-sm:w-[88%] md:w-1/2 mx-auto"
+            className="sm:w-[90%] max-sm:w-[88%] md:w-[44%] mx-auto"
           >
-            <div className="flex flex-col">
-              <label htmlFor="email" className="pb-3 text-white/85 font-bold">
+            <div className="flex flex-col md:w-full mx-auto">
+              <label
+                htmlFor="email"
+                className="pb-2 text-white font-bold text-sm"
+              >
                 Email or username
               </label>
               <input
@@ -75,11 +78,14 @@ const Signin = () => {
                 value={email}
                 placeholder="Email or username"
                 onChange={(e) => setEmail(e.target.value)}
-                className="px-6 py-4 rounded-md bg-black text-white/65 focus:border-white border-[1.5px] hover:border-white border-white/55 w-full focus:outline-white text-md"
+                className="px-6 py-3 rounded-md bg-black text-white focus:border-white border-[1.5px] hover:border-white border-white/55 w-full focus:outline-white text-md"
               />
             </div>
-            <div className="flex flex-col mt-5">
-              <label htmlFor="password" className="pb-3 font-bold text-white">
+            <div className="flex flex-col mt-5 md:w-full">
+              <label
+                htmlFor="password"
+                className="pb-2 font-bold text-white text-sm"
+              >
                 Password
               </label>
               <div className="relative">
@@ -90,45 +96,45 @@ const Signin = () => {
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="px-6 py-4 rounded-md bg-black text-white/65 focus:border-white border-[1.5px] hover:border-white border-white/55 w-full focus:outline-white text-md"
+                  className="px-6 py-3 rounded-md bg-black text-white focus:border-white border-[1.5px] hover:border-white border-white/55 w-full focus:outline-white text-md"
                 />
                 <span
                   className="absolute right-5 top-1/2 -translate-y-1/2"
                   onClick={() => setIsVisible((prev) => !prev)}
                 >
                   {isVisible ? (
-                    <ImEye size={30} className="text-white/65" />
+                    <ImEye size={25} className="text-white/65" />
                   ) : (
-                    <ImEyeBlocked size={30} className="text-white/65" />
+                    <ImEyeBlocked size={25} className="text-white/65" />
                   )}
                 </span>
               </div>
             </div>
-            <div className="pt-4 text-sm text-white font-semibold flex items-center w-full">
+            <div className="pt-4 text-xs text-white font-semibold flex items-center w-full">
               <span
                 className="pr-4"
                 onClick={() => setIsToggled((prev) => !prev)}
               >
                 {isToggled ? (
-                  <PiToggleLeftFill size={40} className="text-white/65" />
+                  <PiToggleLeftFill size={30} className="text-white/65" />
                 ) : (
-                  <IoToggleSharp size={40} color="#1ed760" />
+                  <IoToggleSharp size={30} color="#1ed760" />
                 )}
               </span>
               Remember me
             </div>
             <button
               type="submit"
-              className="px-6 py-4 my-8  duration-300 rounded-full bg-[#1ed75fe7] text-black font-bold text-lg w-full cursor-pointer hover:bg-[#1ed760]"
+              className="px-6 py-3 my-8  rounded-full bg-[#1ed75fe7] text-black font-bold text-md w-full cursor-pointer hover:bg-[#1ed760] hover:scale-105"
             >
               Log In
             </button>
           </form>
-          <p className="text-white underline hover:text-[#1ed760] text-lg text-center w-full mx-auto cursor-pointer">
+          <p className="text-white underline hover:text-[#1ed760] text-md text-center w-full mx-auto cursor-pointer">
             Forgot your password?
           </p>
           <div className="h-[1px] bg-white/10 w-[75%] mx-auto mt-10"></div>
-          <div className="text-center text-md my-20 ">
+          <div className="text-center text-[15px] mb-16 mt-20 leading-relaxed">
             <span className="text-white/65 pr-2">Don't have an account?</span>
             <span className="underline text-white font-bold cursor-pointer hover:text-[#1ed760]">
               Sign up for Spotify
@@ -136,8 +142,8 @@ const Signin = () => {
           </div>
         </div>
       </div>
-      <div className="py-10 bg-[rgba(255,255,255,0.07)]">
-        <p className="text-white/65 text-sm text-center ">
+      <div className="py-8 bg-[rgba(255,255,255,0.07)]">
+        <p className="text-white/65 text-xs text-center ">
           This site is protected by reCAPTCHA and the Google&nbsp;
           <span className="underline cursor-pointer">Privacy Policy</span>
           &nbsp;and&nbsp;
