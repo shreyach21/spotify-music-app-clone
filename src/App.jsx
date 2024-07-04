@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="min-w-[100vw] min-h-screen bg-black max-w-[100vw]">
+    <div className="min-w-[100vw] min-h-screen bg-black overflow-hidden">
       <div className="flex w-full h-full ">
         <div className="w-[24%]">
           <div className="fixed top-0 left-0 w-[24%] bg-black">
@@ -18,7 +18,7 @@ const App = () => {
           <div className="fixed top-0 right-0 left-[24%] bg-black">
             <Navbar />
           </div>
-          <div className="w-full bg-[#121212] rounded text-white my-2 h-full pb-16">
+          <div className="w-full bg-[#121212] rounded text-white my-2 h-full pb-16 ">
             <Outlet />
             <Footer />
           </div>

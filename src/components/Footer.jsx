@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="bg-[#121212] pb-10 pt-20 px-4 text-white flex flex-col">
       <div className="flex justify-between ">
-        <div className="flex justify-between flex-grow ml-5 text-15 tracking-wide">
+        <div className="flex justify-between flex-grow ml-5 text-[14.5px] tracking-wide">
           <div className="flex flex-col gap-y-2">
             <p className="text-white font-semibold text-[15px]">Company</p>
             <p className="text-white/65 cursor-pointer hover:underline hover:text-white ">
@@ -77,8 +77,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="h-[1px] bg-[#272727] my-10"></div>
-      <div className="text-sm text-white/55 mb-8">&copy; 2024 Spotify AB</div>
+      <div className="h-[1px] bg-[#272727] my-10 ml-4"></div>
+      <div className="text-sm text-white/55 mb-8 ml-4">
+        &copy; 2024 Spotify AB
+      </div>
     </div>
   );
 };
