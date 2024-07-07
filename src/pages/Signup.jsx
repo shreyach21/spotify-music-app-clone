@@ -8,10 +8,13 @@ const Signup = () => {
   return (
     <div className="text-white h-screen w-full  bg-black">
       <div className="w-[448px]  mx-auto pb-2 flex flex-col justify-center">
-        <div className="flex justify-center py-6 items-center">
-          <FaSpotify size={42} color="white" />
+        <div className="flex justify-center sm:pt-6 sm:pb-4  max-sm:pt-6 max-sm:pb-4 md:pb-5 md:pt-8 items-center">
+          <FaSpotify
+            color="white"
+            className="max-sm:w-[25px] max-sm:h-[25px] sm:w-[25px] sm:h-[25px] md:size-10"
+          />
         </div>
-        <h1 className="text-white text-[44px] text-center font-bold pb-10 leading-tight">
+        <h1 className="text-white md:text-[44px] sm:text-[30px] max-sm:text-[30px] text-center font-bold pb-10 leading-tight">
           Sign up to start
           <br /> listening
         </h1>
@@ -20,7 +23,7 @@ const Signup = () => {
             <div className="flex flex-col mx-auto w-full">
               <label
                 htmlFor="email"
-                className="text-white text-sm pb-2 pt-4 font-semibold"
+                className="text-white text-sm pb-2 pt-1 font-semibold"
               >
                 Email address
               </label>
@@ -78,7 +81,7 @@ const Signup = () => {
               Log in here
             </span>
           </div>
-          <div className="text-xs text-white/65 leading-relaxed text-center">
+          <div className="text-xs text-white/65 leading-relaxed text-center pb-4">
             <p>This site is protected by reCAPCHA and the Google</p>
             <span className="underline cursor-pointer">Privacy Policy</span>
             &nbsp;and&nbsp;

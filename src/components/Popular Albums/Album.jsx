@@ -12,17 +12,23 @@ const Album = ({
   const [hover, setHover] = useState(false);
   return (
     <div
-      className="flex flex-col  rounded hover:bg-[#1b1b1b] duration-300 cursor-pointer p-3 justify-center relative"
+      className="flex flex-col gap-x-1 rounded hover:bg-[#1b1b1b] duration-300 cursor-pointer p-3  items-center relative h-full"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div className={` overflow-hidden  rounded-md mb-2 ${className}`}>
+      <div
+        className={` overflow-hidden  rounded-md mb-2  flex justify-center items-center`}
+      >
         <img src={img} alt={movie} className="" />
       </div>
-      <p className={`text-[15px] tracking-wide truncate mb-0.5 ${nameSize}`}>
+      <p
+        className={`text-[15px] tracking-wide truncate mb-0.5 ${nameSize} text-start w-full`}
+      >
         {movie}
       </p>
-      <div className={`leading-tight ${textSize}`}>
+      <div
+        className={`leading-tight ${textSize} line-clamp-2 text-start w-full`}
+      >
         {singerList
           .filter((singer) => singer !== singerList[singerList.length - 1])
           .map((item) => {

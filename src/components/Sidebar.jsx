@@ -6,11 +6,12 @@ import { FiSearch, FiGlobe } from "react-icons/fi";
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col p-2  text-white gap-2 ">
-      <div className="bg-[#121212] gap-5 h-[15%] rounded flex flex-col justify-around text-md py-5">
+    // <div className="flex flex-col  text-white gap-1.5 w-full h-full ">
+    <div className="flex flex-col  text-white gap-1.5 w-full">
+      <div className="bg-[#121212] gap-5 h-[155px] rounded flex flex-col justify-around text-md py-5">
         <div className="flex items-center cursor-pointer gap-0.5 pl-6">
           <FaSpotify color="white" size={25} />
-          <p className="font-semibold text-[14px]">Spotify</p>
+          <p className="font-semibold text-[14.5px]">Spotify</p>
         </div>
         <div className="flex items-center gap-5 cursor-pointer pl-6 text-white/65 hover:text-white duration-300 ">
           {/* <img src={assets.home_icon} className="w-6 " alt="home" /> */}
@@ -23,7 +24,7 @@ const Sidebar = () => {
           <p className="font-semibold text-[15.5px]">Search</p>
         </div>
       </div>
-      <div className="bg-[#121212] rounded h-[85%] ">
+      <div className="bg-[#121212] rounded flex-grow h-[85%] ">
         <div className="px-4 py-3 flex justify-between items-center">
           <div className="flex gap-3 items-center pl-2">
             <img src={assets.stack_icon} className="w-6 " alt="library" />
@@ -36,7 +37,7 @@ const Sidebar = () => {
             className="text-white/55 p-1 hover:text-white duration-300 cursor-pointer hover:bg-[#1a1a1a] rounded-full"
           />
         </div>
-        <div className="">
+        <div className="overflow-y-scroll max-h-[285px] min-h-[67px] ">
           <div className="py-3.5 bg-[#242424] rounded flex flex-col font-semibold justify-start items-start pl-5 gap-1.5 m-2">
             <p className="text-[15px] font-medium tracking-wide leading-7">
               Create your first playlist
@@ -60,7 +61,7 @@ const Sidebar = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col gap-3 text-white/60 text-[10px] leading-4 capitalize pl-6 py-8 cursor-pointer ">
+        <div className="flex flex-col gap-3 text-white/60 text-[11px] leading-4 capitalize pl-6  py-9 cursor-pointer ">
           <div className="flex gap-4 items-center ">
             <p>Legal</p>
             <p>safety & privacy center</p>
