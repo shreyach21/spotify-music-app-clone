@@ -1,8 +1,10 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     // <div className="flex justify-between items-center px-6 w-full h-[60px] mt-2 bg-[#0c0c0c] rounded z-50 overflow-x-scroll">
     <div className="flex justify-between items-center px-6 py-2 w-full h-full bg-gradient-to-b from-[#121212] to-[#111111] rounded  ">
@@ -10,10 +12,12 @@ const Navbar = () => {
         <GoChevronLeft
           className="text-white/55 hover:text-white duration-300 bg-black rounded-full"
           size={26}
+          onClick={() => navigate(-1)}
         />
         <GoChevronRight
           className="text-white/55 hover:text-white duration-300 rounded-full bg-black "
           size={27}
+          onClick={() => navigate(1)}
         />
       </div>
       <div className="flex gap-x-8 items-center mr-2">
